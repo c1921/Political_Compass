@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(18, 100px);
+  grid-gap: 0px;
+  max-width: 1920; /* 如果希望 grid 不要超过一定宽度，可以设置 max-width */
+  margin: auto; /* 使用 auto 居中 */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: normal;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.container:hover .square:not(:hover) {
+  opacity: 0.5;
+}
+
+.square:hover::before {
+  content: attr(data-info);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #cfcfcf;
+  padding: 5px;
+  border: 1px solid #000000;
+  display: block;
+  z-index: 1;
+}
+
+.square:hover:not(:hover) {
+  opacity: 0.5;
+}
+
+#square1 {
+  background-color: #3498db; /* 方块1的背景颜色 */
+}
+
+#square2 {
+  background-color: #e74c3c; /* 方块2的背景颜色 */
+}
+
+#square3 {
+  background-color: #2ecc71; /* 方块3的背景颜色 */
+}
