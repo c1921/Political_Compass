@@ -10,7 +10,7 @@ body {
   display: grid;
   grid-template-columns: repeat(18, 100px);
   grid-gap: 0px;
-  max-width: 1920; /* 如果希望 grid 不要超过一定宽度，可以设置 max-width */
+  max-width: 1920px; /* 如果希望 grid 不要超过一定宽度，可以设置 max-width */
   margin: auto; /* 使用 auto 居中 */
 }
 
@@ -42,15 +42,21 @@ body {
   z-index: 1;
 }
 
-.square:hover:not(:hover) {
-  opacity: 0.5;
+.blank:hover::before {
+  display: none;
 }
 
-#square1 {
-  background-color: #3498db; /* 方块1的背景颜色 */
+.spacer {
+  width: 100px; /* 或者你想要的空白格宽度 */
+  height: 100px; /* 或者你想要的空白格高度 */
 }
 
-#square2 {
+#s1,#s2,#s3 {
+  background: none;
+  border: none;
+}
+
+#s4 {
   background-color: #e74c3c; /* 方块2的背景颜色 */
 }
 
