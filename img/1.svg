@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   class="lucide lucide-move"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="1.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask9">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:stroke fill markers"
+         id="rect10"
+         width="23.999998"
+         height="23.999998"
+         x="5.4794521e-07"
+         y="5.9999996e-07"
+         ry="8" />
+    </mask>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     showgrid="true"
+     inkscape:zoom="12.094472"
+     inkscape:cx="10.583347"
+     inkscape:cy="7.4827573"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5">
+    <inkscape:grid
+       id="grid9"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <g
+     id="g9"
+     mask="url(#mask9)">
+    <rect
+       style="fill:#ff3636;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:stroke fill markers"
+       id="rect6"
+       width="12"
+       height="12"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#365aff;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:stroke fill markers"
+       id="rect6-9"
+       width="12"
+       height="12"
+       x="12"
+       y="0" />
+    <rect
+       style="fill:#81ff36;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:stroke fill markers"
+       id="rect6-9-0"
+       width="12"
+       height="12"
+       x="0"
+       y="12" />
+    <rect
+       style="fill:#f9ff36;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:stroke fill markers"
+       id="rect6-9-0-2"
+       width="12"
+       height="12"
+       x="12"
+       y="12" />
+  </g>
+  <polyline
+     points="5 9 2 12 5 15"
+     id="polyline1" />
+  <polyline
+     points="9 5 12 2 15 5"
+     id="polyline2" />
+  <polyline
+     points="15 19 12 22 9 19"
+     id="polyline3" />
+  <polyline
+     points="19 9 22 12 19 15"
+     id="polyline4" />
+  <line
+     x1="2"
+     x2="22"
+     y1="12"
+     y2="12"
+     id="line4" />
+  <line
+     x1="12"
+     x2="12"
+     y1="2"
+     y2="22"
+     id="line5" />
+</svg>
