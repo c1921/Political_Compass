@@ -9,9 +9,9 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(18, 100px);
-  grid-gap: 0px;
-  max-width: 1920px; /* 如果希望 grid 不要超过一定宽度，可以设置 max-width */
-  margin: auto; /* 使用 auto 居中 */
+  grid-gap: 1px;
+  max-width: 1920px;
+  margin: auto;
 }
 
 .square {
@@ -19,6 +19,7 @@ body {
   height: 100px;
   text-align: center;
   line-height: normal;
+  font-size: 15px;
   box-sizing: border-box;
   border: 1px solid #ddd;
   cursor: pointer;
@@ -30,7 +31,7 @@ body {
   transform: scale(1.05);
 }
 
-.square:hover::before {
+.square:hover:not(#s2,#s3,#s4,#s5,#s6,#s10,#s11,#s13,#s14,#s15,#s16,#s17,#s19,#s37,#s55,#s72,#s73,#s90,#s109,#s126,#s127,#s144,#s163,#s180,#s199,#s216,#s217,#s235,#s252,#s253,#s270,#s271,#s288,#s289,#s306,#s308,#s309,#s311,#s314,#s317,#s320,#s323):before {
   content: attr(data-info);
   position: absolute;
   top: 10%;
@@ -43,24 +44,8 @@ body {
   z-index: 1;
 }
 
-.blank:hover::before {
-  display: none;
-}
-
-.spacer {
-  width: 100px; /* 或者你想要的空白格宽度 */
-  height: 100px; /* 或者你想要的空白格高度 */
-}
-
-#s1,#s2,#s3 {
+#s2,#s3,#s4,#s5,#s6,#s10,#s11,#s13,#s14,#s15,#s16,#s17,#s19,#s37,#s55,#s72,#s73,#s90,#s109,#s126,#s127,#s144,#s163,#s180,#s199,#s216,#s217,#s235,#s252,#s253,#s270,#s271,#s288,#s289,#s306,#s308,#s309,#s311,#s314,#s317,#s320,#s323 {
   background: none;
   border: none;
-}
-
-#s4 {
-  background-color: #e74c3c; /* 方块2的背景颜色 */
-}
-
-#square3 {
-  background-color: #2ecc71; /* 方块3的背景颜色 */
+  opacity: 0;
 }
