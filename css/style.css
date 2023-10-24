@@ -80,7 +80,7 @@ body {
   padding: 0px 0px 300px;
 }
 
-p {
+p,blockquote {
   color: #e0e0e0;
 }
 
