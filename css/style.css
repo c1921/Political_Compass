@@ -75,3 +75,15 @@ body {
   display: block;
   align-items: normal;
 }
+
+.embed {
+  padding: 0px 0px 300px;
+}
+
+p {
+  color: #e0e0e0;
+}
+
+a {
+  color: #c4f1ff;
+}
