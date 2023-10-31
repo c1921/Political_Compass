@@ -9,26 +9,27 @@ body {
 .container {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(18, 100px);
-  grid-gap: 0px;
+  grid-template-columns: repeat(18, 90px);
+  grid-gap: 2px;
   max-width: 1920px;
   margin: auto;
   padding: 200px 10px 100px;
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   line-height: normal;
-  font-size: 13px;
+  font-size: 16px;
   box-sizing: border-box;
-  border: 1px solid #1d1d1d;
   cursor: pointer;
   transition: opacity 0.3s ease;
   background-color: #ffffff;
+  padding: 2px;
 }
 
 .square:hover {
@@ -40,12 +41,13 @@ body {
 .square:hover:not(#s2,#s3,#s4,#s5,#s6,#s10,#s11,#s13,#s14,#s15,#s16,#s17,#s19,#s37,#s55,#s72,#s73,#s90,#s109,#s126,#s127,#s144,#s163,#s180,#s199,#s216,#s217,#s235,#s252,#s253,#s270,#s271,#s288,#s289,#s306,#s308,#s309,#s311,#s314,#s317,#s320,#s323,#s154,#s171):before {
   content: attr(data-info);
   position: absolute;
-  top: 10%;
+  top: calc(100% + 3px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: #cfcfcf;
+  background: #ffffff80;
+  backdrop-filter: blur(8px);
   padding: 5px;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   display: block;
 }
 
@@ -63,12 +65,12 @@ body {
 }
 
 #s153 {
-  width: 200px;
-  height: 200px;
+  width: 182px;
+  height: 182px;
 }
 
 #s163,#s164,#s165,#s166,#s167,#s168,#s169,#s170,#s171,#s172,#s173,#s174,#s175,#s176,#s177,#s178,#s179,#s180,#s181,#s182,#s183,#s184,#s185,#s186,#s187,#s188,#s189,#s190,#s191,#s192,#s193,#s194,#s195,#s196,#s197,#s198,#s199,#s200,#s201,#s202,#s203,#s204,#s205,#s206,#s207,#s208,#s209,#s210,#s211,#s212,#s213,#s214,#s215,#s216,#s217,#s218,#s219,#s220,#s221,#s222,#s223,#s224,#s225,#s226,#s227,#s228,#s229,#s230,#s231,#s232,#s233,#s234,#s235,#s236,#s237,#s238,#s239,#s240,#s241,#s242,#s243,#s244,#s245,#s246,#s247,#s248,#s249,#s250,#s251,#s252,#s253,#s254,#s255,#s256,#s257,#s258,#s259,#s260,#s261,#s262,#s263,#s264,#s265,#s266,#s267,#s268,#s269,#s270,#s271,#s272,#s273,#s274,#s275,#s276,#s277,#s278,#s279,#s280,#s281,#s282,#s283,#s284,#s285,#s286,#s287,#s288,#s289,#s290,#s291,#s292,#s293,#s294,#s295,#s296,#s297,#s298,#s299,#s300,#s301,#s302,#s303,#s304,#s305,#s306,#s307,#s308,#s309,#s310,#s311,#s312,#s313,#s314,#s315,#s316,#s317,#s318,#s319,#s320,#s321,#s322,#s323,#s324 {
-  transform: translateY(-100px);
+  transform: translateY(-92px);
 }
 
 .footer {
