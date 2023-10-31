@@ -89,3 +89,11 @@ p,blockquote {
 a {
   color: #c4f1ff;
 }
+
+.square p {
+  color: #000;
+}
+
+span {
+  font-size: 12px;
+}
