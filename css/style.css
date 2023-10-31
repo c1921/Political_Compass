@@ -97,3 +97,89 @@ a {
 span {
   font-size: 12px;
 }
+
+/*--------图例-----------*/
+
+.legend {
+  background-color: #444444;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 440px);
+  grid-gap: 2px;
+  margin: auto;
+  padding: 20px;
+}
+
+.legend-sheet {
+  padding: 20px;
+}
+
+.title{
+  text-align: center;
+  font-size: 26px;
+  color: #d8d8d8;
+}
+
+.sheet {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  justify-content: center;
+  grid-gap: 2px;
+  margin: auto;
+  padding: 5px;
+}
+
+.color {
+  width: 90px;
+  height: 90px;
+  background-color: #e0e0e0;
+  margin: auto;
+}
+
+#s153 {
+ background-color: rgb(204, 204, 204);
+}
+
+/*-------------*/
+/*
+
+([0-9]*)\s
+#s$1,
+
+*/
+
+#s5a,#s1,#s20,#s21,#s23,#s24,#s39,#s40,#s45,#s56,#s59,#s60,#s62,#s75,#s79,#s81,#s92,#s94,#s95,#s97,#s99,#s110,#s111,#s112,#s113,#s115,#s117,#s128,#s129,#s130,#s131,#s132,#s145,#s147,#s148,#s149 {
+  background-color: rgb(244, 204, 204);
+}
+
+#s7,#s8,#s9,#s25,#s26,#s38,#s44,#s58,#s61,#s74,#s77,#s114,#s134,#s135,#s150 {
+  background-color: rgb(230, 184, 175);
+}
+
+#s22,#s41,#s93,#s96 {
+  background-color: rgb(161, 91, 76);
+}
+
+#s3a,#s27,#s63,#s76,#s146,#s152 {
+  background-color: rgb(255, 122, 122);
+}
+
+#s42,#s43,#s57,#s80,#s116,#s151 {
+  background-color: rgb(184, 145, 138);
+}
+
+#s4a,#s78,#s98 {
+  background-color: rgb(234, 153, 153);
+}
+
+#s2a,#s133 {
+  background-color: rgb(255, 70, 70);
+}
+
+#s91 {
+  background-color: rgb(195, 0, 0);
+}
+
+/*-------------*/
+
