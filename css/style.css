@@ -87,6 +87,9 @@ h1 span {
   transform: translateY(-92px);
 }
 
+
+
+
 .info {
   padding: 0px 0px 10px;
 }
@@ -315,3 +318,29 @@ hr {
 }
 /*-------------*/
 
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0px;
+  }
+  h1{
+    padding: 0;
+  }
+  .container {
+    grid-template-columns: repeat(18, 30px);
+    grid-gap: 2px;
+  }
+  .square {
+    width: 30px;
+    height: 30px;
+    font-size: 5px;
+  }
+  span {
+    font-size: 2px;
+  }  
+  .legend {
+    grid-template-columns: repeat(1, 10px);
+  }
+  .sheet {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
