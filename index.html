@@ -11,12 +11,14 @@
 <body>
 
   <header>
-    <h1>16×16 三维政治罗盘 <span>1.0.0</span><br><span>03</span>
+    <h1>16×16 三维政治罗盘 <span>1.0.0</span><br><span>04</span>
   </header>
 
-  <div class="scroll" id="scroll">
+  <div class="scroll">
 
-    <div class="container" id="container">
+    <!--<input type="range" id="scaleSlider" min="0.2" max="1" step="0.1" value="1">-->
+
+    <div class="container" id="scaledDiv">
       <div class="square" id="s1" data-info="Hivemind Collectivism"><p>蜂群思维<br>集体主义</p></div>
       <div class="square" id="s2" data-info=""></div>
       <div class="square" id="s3" data-info=""></div>
@@ -342,20 +344,22 @@
       <div class="square-a" id="s323" data-info=""></div>
       <div class="square-a" id="s324" data-info="Avaritionism"><p>贪欲主义</p></div>
     </div>
+    
+    <div class="legend">
+      <div class="legend-sheet"><div class="title">Noveltist<br>新颖</div><div class="sheet"><div class="color" id="a1"></div>	<div class="color" id="b1"></div>	<div class="color" id="c1"></div>	<div class="color" id="d1"></div></div></div>
+      <div class="legend-sheet"><div class="title">Ultra Progressive<br>超前卫</div><div class="sheet"><div class="color" id="a2"></div>	<div class="color" id="b2"></div>	<div class="color" id="c2"></div>	<div class="color" id="d2"></div></div></div>
+      <div class="legend-sheet"><div class="title">Progressive<br>进步</div><div class="sheet"><div class="color" id="a3"></div>	<div class="color" id="b3"></div>	<div class="color" id="c3"></div>	<div class="color" id="d3"></div></div></div>
+      <div class="legend-sheet"><div class="title">Cultural Liberal<br>文化自由</div><div class="sheet"><div class="color" id="a4"></div>	<div class="color" id="b4"></div>	<div class="color" id="c4"></div>	<div class="color" id="d4"></div></div></div>
+      <div class="legend-sheet"><div class="title">Neutra<br>中立</div><div class="sheet"><div class="color" id="a5"></div>	<div class="color" id="b5"></div>	<div class="color" id="c5"></div>	<div class="color" id="d5"></div></div></div>
+      <div class="legend-sheet"><div class="title">Conservative<br>保守</div><div class="sheet"><div class="color" id="a6"></div>	<div class="color" id="b6"></div>	<div class="color" id="c6"></div>	<div class="color" id="d6"></div></div></div>
+      <div class="legend-sheet"><div class="title">Traditionalist<br>传统</div><div class="sheet"><div class="color" id="a7"></div>	<div class="color" id="b7"></div>	<div class="color" id="c7"></div>	<div class="color" id="d7"></div></div></div>
+      <div class="legend-sheet"><div class="title">Reactionary<br>反动</div><div class="sheet"><div class="color" id="a8"></div>	<div class="color" id="b8"></div>	<div class="color" id="c8"></div>	<div class="color" id="d8"></div></div></div>
+      <div class="legend-sheet"><div class="title">Antiquitist<br>古老</div><div class="sheet"><div class="color" id="a9"></div>	<div class="color" id="b9"></div>	<div class="color" id="c9"></div>	<div class="color" id="d9"></div></div></div>
+   </div>
 
   </div>
   
-  <!--<div class="legend">
-    <div class="legend-sheet"><div class="title">Noveltist<br>新颖</div><div class="sheet"><div class="color" id="a1"></div>	<div class="color" id="b1"></div>	<div class="color" id="c1"></div>	<div class="color" id="d1"></div></div></div>
-    <div class="legend-sheet"><div class="title">Ultra Progressive<br>超前卫</div><div class="sheet"><div class="color" id="a2"></div>	<div class="color" id="b2"></div>	<div class="color" id="c2"></div>	<div class="color" id="d2"></div></div></div>
-    <div class="legend-sheet"><div class="title">Progressive<br>进步</div><div class="sheet"><div class="color" id="a3"></div>	<div class="color" id="b3"></div>	<div class="color" id="c3"></div>	<div class="color" id="d3"></div></div></div>
-    <div class="legend-sheet"><div class="title">Cultural Liberal<br>文化自由</div><div class="sheet"><div class="color" id="a4"></div>	<div class="color" id="b4"></div>	<div class="color" id="c4"></div>	<div class="color" id="d4"></div></div></div>
-    <div class="legend-sheet"><div class="title">Neutra<br>中立</div><div class="sheet"><div class="color" id="a5"></div>	<div class="color" id="b5"></div>	<div class="color" id="c5"></div>	<div class="color" id="d5"></div></div></div>
-    <div class="legend-sheet"><div class="title">Conservative<br>保守</div><div class="sheet"><div class="color" id="a6"></div>	<div class="color" id="b6"></div>	<div class="color" id="c6"></div>	<div class="color" id="d6"></div></div></div>
-    <div class="legend-sheet"><div class="title">Traditionalist<br>传统</div><div class="sheet"><div class="color" id="a7"></div>	<div class="color" id="b7"></div>	<div class="color" id="c7"></div>	<div class="color" id="d7"></div></div></div>
-    <div class="legend-sheet"><div class="title">Reactionary<br>反动</div><div class="sheet"><div class="color" id="a8"></div>	<div class="color" id="b8"></div>	<div class="color" id="c8"></div>	<div class="color" id="d8"></div></div></div>
-    <div class="legend-sheet"><div class="title">Antiquitist<br>古老</div><div class="sheet"><div class="color" id="a9"></div>	<div class="color" id="b9"></div>	<div class="color" id="c9"></div>	<div class="color" id="d9"></div></div></div>
- </div>-->
+
 
   <hr>
 
