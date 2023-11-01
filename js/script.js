@@ -1,5 +1,5 @@
-var container = document.getElementById('scrollContainer');
-var image = document.getElementById('imageContainer');
+var container = document.getElementById('scroll');
+var image = document.getElementById('container');
 
 var startX, startY, pinchStartDistance;
 
