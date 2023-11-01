@@ -1,26 +1,48 @@
 // 获取元素
 const zoomableContent = document.getElementById('zoomableContent');
 
+let initialDistance = 0;
+let currentDistance = 0;
+let isPinching = false;
 let scale = 1;
 
-// 检测屏幕宽度
-const isMobile = window.matchMedia('(max-width: 767px)').matches;
+// 检测触摸支持
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-// 如果是手机，添加滚轮事件监听
-if (isMobile) {
-  // 监听滚轮事件
-  zoomableContent.addEventListener('wheel', (event) => {
-    // 阻止默认的滚动行为
-    event.preventDefault();
+if (isTouchDevice) {
+  // 添加触摸事件监听
+  zoomableContent.addEventListener('touchstart', (event) => {
+    if (event.touches.length === 2) {
+      isPinching = true;
 
-    // 根据滚轮方向调整缩放比例
-    if (event.deltaY < 0) {
-      scale += 0.1; // 放大
-    } else {
-      scale -= 0.1; // 缩小
+      // 计算初始触摸点之间的距离
+      initialDistance = Math.hypot(
+        event.touches[0].clientX - event.touches[1].clientX,
+        event.touches[0].clientY - event.touches[1].clientY
+      );
     }
+  });
 
-    // 设置缩放样式
-    zoomableContent.style.transform = `scale(${scale})`;
+  zoomableContent.addEventListener('touchmove', (event) => {
+    if (isPinching && event.touches.length === 2) {
+      // 计算当前触摸点之间的距离
+      currentDistance = Math.hypot(
+        event.touches[0].clientX - event.touches[1].clientX,
+        event.touches[0].clientY - event.touches[1].clientY
+      );
+
+      // 根据距离变化调整缩放比例
+      scale += (currentDistance - initialDistance) * 0.01;
+
+      // 设置缩放样式
+      zoomableContent.style.transform = `scale(${scale})`;
+
+      // 更新初始距离
+      initialDistance = currentDistance;
+    }
+  });
+
+  zoomableContent.addEventListener('touchend', () => {
+    isPinching = false;
   });
 }
