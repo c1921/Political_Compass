@@ -20,6 +20,9 @@ if (isTouchDevice) {
         event.touches[0].clientX - event.touches[1].clientX,
         event.touches[0].clientY - event.touches[1].clientY
       );
+
+      // 阻止默认的缩放行为
+      event.preventDefault();
     }
   });
 
@@ -39,6 +42,9 @@ if (isTouchDevice) {
 
       // 更新初始距离
       initialDistance = currentDistance;
+
+      // 阻止默认的缩放行为
+      event.preventDefault();
     }
   });
 
