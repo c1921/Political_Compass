@@ -1,54 +1,46 @@
-// 获取元素
-const zoomableContent = document.getElementById('zoomableContent');
+var container = document.getElementById('scrollContainer');
+var image = document.getElementById('imageContainer');
 
-let initialDistance = 0;
-let currentDistance = 0;
-let isPinching = false;
-let scale = 1;
+var startX, startY, pinchStartDistance;
 
-// 检测触摸支持
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+container.addEventListener('touchstart', function (e) {
+e.preventDefault();
 
-if (isTouchDevice) {
-  // 添加触摸事件监听
-  zoomableContent.addEventListener('touchstart', (event) => {
-    if (event.touches.length === 2) {
-      isPinching = true;
+if (e.touches.length === 1) {
+startX = e.touches[0].pageX;
+startY = e.touches[0].pageY;
+} else if (e.touches.length === 2) {
+pinchStartDistance = getPinchDistance(e.touches[0], e.touches[1]);
+}
+});
 
-      // 计算初始触摸点之间的距离
-      initialDistance = Math.hypot(
-        event.touches[0].clientX - event.touches[1].clientX,
-        event.touches[0].clientY - event.touches[1].clientY
-      );
+container.addEventListener('touchmove', function (e) {
+e.preventDefault();
 
-      // 阻止默认的缩放行为
-      event.preventDefault();
-    }
-  });
+if (e.touches.length === 1) {
+var offsetX = e.touches[0].pageX - startX;
+var offsetY = e.touches[0].pageY - startY;
 
-  zoomableContent.addEventListener('touchmove', (event) => {
-    if (isPinching && event.touches.length === 2) {
-      // 计算当前触摸点之间的距离
-      currentDistance = Math.hypot(
-        event.touches[0].clientX - event.touches[1].clientX,
-        event.touches[0].clientY - event.touches[1].clientY
-      );
+container.scrollLeft -= offsetX;
+container.scrollTop -= offsetY;
 
-      // 根据距离变化调整缩放比例
-      scale += (currentDistance - initialDistance) * 0.01;
+startX = e.touches[0].pageX;
+startY = e.touches[0].pageY;
+} else if (e.touches.length === 2) {
+var pinchDistance = getPinchDistance(e.touches[0], e.touches[1]);
+var scale = pinchDistance / pinchStartDistance;
 
-      // 设置缩放样式
-      zoomableContent.style.transform = `scale(${scale})`;
+pinchStartDistance = pinchDistance;
 
-      // 更新初始距离
-      initialDistance = currentDistance;
+var currentWidth = parseFloat(getComputedStyle(image).width);
+var newWidth = currentWidth * scale;
 
-      // 阻止默认的缩放行为
-      event.preventDefault();
-    }
-  });
+image.style.width = newWidth + 'px';
+}
+});
 
-  zoomableContent.addEventListener('touchend', () => {
-    isPinching = false;
-  });
+function getPinchDistance(touch1, touch2) {
+var dx = touch1.pageX - touch2.pageX;
+var dy = touch1.pageY - touch2.pageY;
+return Math.sqrt(dx * dx + dy * dy);
 }
