@@ -22,9 +22,6 @@ h1 span {
 
 .scroll {
   width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  overflow-y: auto;
   background-color: #202020;
   display: flex;
   align-items: center;
@@ -156,6 +153,7 @@ hr {
   text-align: center;
   font-size: 16px;
   color: #d8d8d8;
+  padding: 0px 0px 30px;
 }
 
 .sheet {
@@ -331,4 +329,42 @@ hr {
 
 
   
+}
+
+.double-arrow {
+  position: relative;
+  width: 1220px; /* 宽度可以根据需要调整 */
+  height: 150px; /* 高度可以根据需要调整 */
+  transform: translateY(-540px);
+}
+
+.double-arrow::before,
+.double-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* 垂直居中 */
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  transform: translateY(-50%); /* 垂直居中 */
+}
+
+.double-arrow::before {
+  right: 100%; /* 左箭头，通过调整这里的百分比可以改变箭头的位置 */
+  border-right-color: #242424; /* 箭头颜色 */
+}
+
+.double-arrow::after {
+  left: 100%; /* 右箭头，通过调整这里的百分比可以改变箭头的位置 */
+  border-left-color: #242424; /* 箭头颜色 */
+}
+
+.line {
+  position: absolute;
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  height: 10px; /* 线条的高度可以根据需要调整 */
+  width: 101%; /* 线条的宽度可以根据需要调整 */
+  background-color: #242424; /* 线条的颜色 */
+  transform: translate(-50%, -50%); /* 使线条在容器中水平和垂直居中 */
 }
